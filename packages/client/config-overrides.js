@@ -1,4 +1,18 @@
-const rewireYarnWorkspaces = require('react-app-rewire-yarn-workspaces');
-module.exports = function override(config, env) {
-    return rewireYarnWorkspaces(config, env);
-};
+const {
+    override,
+    addBabelPlugin,
+} = require("customize-cra");
+
+module.exports = override(
+    addBabelPlugin([
+        "babel-plugin-root-import",
+        {
+            paths: [
+                {
+                    rootPathSuffix: "src",
+                    rootPathPrefix: "~"
+                }
+            ]
+        }
+    ]),
+)
