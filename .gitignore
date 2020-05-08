@@ -1,0 +1,13 @@
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+
+/packages/*/.yarn/*
+!/packages/*/.yarn/releases
+!/packages/*/.yarn/plugins
+/packages/*/.pnp.*
+
+*.old
+
+.env
