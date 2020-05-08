@@ -1,5 +1,5 @@
 {
-  "name": "inaya",
+  "name": "fullstack-cra-monorepo-boilerplate",
   "private": true,
   "workspaces": [
     "packages/*"
